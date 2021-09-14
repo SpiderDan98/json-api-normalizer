@@ -4,6 +4,7 @@
   "description": "JSON API response normalizer",
   "main": "dist/bundle.js",
   "scripts": {
+    "install": "npx mix --production",
     "dev": "npx mix",
     "prod": "npx mix --production",
     "test": "jest"
