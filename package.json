@@ -1,0 +1,41 @@
+{
+  "name": "@spiderdan98/json-api-normalizer",
+  "version": "1.0.0",
+  "description": "JSON API response normalizer",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "dev": "npx mix",
+    "prod": "npx mix --production",
+    "test": "jest"
+  },
+  "keywords": [
+    "JSON",
+    "API",
+    "normalize"
+  ],
+  "author": "SpiderDan98",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
+    "@types/json-pointer": "^1.0.31",
+    "babel-jest": "^27.1.1",
+    "jest": "^27.1.1",
+    "laravel-mix": "^6.0.30",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "json-pointer": "^0.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpiderDan98/json-api-normalizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SpiderDan98/json-api-normalizer/issues"
+  },
+  "homepage": "https://github.com/SpiderDan98/json-api-normalizer#readme"
+}

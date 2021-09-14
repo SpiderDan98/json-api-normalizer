@@ -1,0 +1,39 @@
+{
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "errors": [
+    {
+      "detail": "This combination of Name, Street, City already exists.",
+      "source": {
+        "pointer": "/data/attributes/name"
+      },
+      "status": "422",
+      "title": "Unprocessable Entity"
+    },
+    {
+      "detail": "The field league is required.",
+      "source": {
+        "pointer": "/data/attributes/tournament/league"
+      },
+      "status": "422",
+      "title": "Unprocessable Entity"
+    },
+    {
+      "detail": "The field league is required.",
+      "source": {
+        "pointer": "/data/attributes/tournaments/0/league"
+      },
+      "status": "422",
+      "title": "Unprocessable Entity"
+    },
+    {
+      "detail": "The field league is required.",
+      "source": {
+        "pointer": "/data/attributes/tournaments/4/league"
+      },
+      "status": "422",
+      "title": "Unprocessable Entity"
+    }
+  ]
+}

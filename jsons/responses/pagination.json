@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "page": {
+      "currentPage": 1,
+      "from": 1,
+      "lastPage": 1,
+      "perPage": 3,
+      "to": 3,
+      "total": 3
+    }
+  },
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "first": "http://localhost/api/v1/games",
+    "last": "http://localhost/api/v1/games"
+  },
+  "data": [
+    {
+      "type": "games",
+      "id": "16",
+      "attributes": {
+        "name": "Game 16",
+        "canceled": false,
+        "createdAt": "2000-12-10T08:40:09.000000Z",
+        "updatedAt": "1982-04-19T14:23:17.000000Z"
+      },
+      "relationships": {
+        "tournament": {
+          "data": {
+            "type": "tournaments",
+            "id": "17"
+          }
+        }
+      },
+      "links": {
+        "self": "http://localhost/api/v1/games/16"
+      },
+      "meta": {
+        "foo": "game"
+      }
+    },
+    {
+      "type": "games",
+      "id": "18",
+      "attributes": {
+        "name": "Game 18",
+        "canceled": true,
+        "createdAt": "2004-04-07T04:33:43.000000Z",
+        "updatedAt": "1994-02-07T06:54:26.000000Z"
+      },
+      "relationships": {
+        "tournament": {
+          "data": {
+            "type": "tournaments",
+            "id": "19"
+          }
+        }
+      },
+      "links": {
+        "self": "http://localhost/api/v1/games/18"
+      },
+      "meta": {
+        "foo": "game"
+      }
+    },
+    {
+      "type": "games",
+      "id": "9",
+      "attributes": {
+        "name": "Game 9",
+        "canceled": false,
+        "createdAt": "1978-04-23T04:32:51.000000Z",
+        "updatedAt": "1978-03-01T16:50:00.000000Z"
+      },
+      "relationships": {
+        "tournament": {
+          "data": {
+            "type": "tournaments",
+            "id": "10"
+          }
+        }
+      },
+      "links": {
+        "self": "http://localhost/api/v1/games/9"
+      },
+      "meta": {
+        "foo": "game"
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "tournaments",
+      "id": "17",
+      "attributes": {
+        "name": "Tournament 17",
+        "isActive": true,
+        "createdAt": "2021-09-08T18:46:27.000000Z",
+        "updatedAt": "2021-09-08T18:46:27.000000Z"
+      },
+      "relationships": {
+        "creator": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/17/creator",
+            "self": "http://localhost/api/v1/tournaments/17/relationships/creator"
+          },
+          "data": {
+            "type": "users",
+            "id": "33"
+          }
+        },
+        "location": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/17/location",
+            "self": "http://localhost/api/v1/tournaments/17/relationships/location"
+          },
+          "data": {
+            "type": "locations",
+            "id": "17"
+          }
+        },
+        "games": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/17/games",
+            "self": "http://localhost/api/v1/tournaments/17/relationships/games"
+          }
+        }
+      },
+      "links": {
+        "self": "http://localhost/api/v1/tournaments/17"
+      },
+      "meta": {
+        "foo": "tournament"
+      }
+    },
+    {
+      "type": "users",
+      "id": "33",
+      "attributes": {
+        "username": "User 33",
+        "createdAt": "2021-09-08T18:46:27.000000Z",
+        "updatedAt": "2021-09-08T18:46:27.000000Z"
+      },
+      "links": {
+        "self": "http://localhost/api/v1/users/33"
+      },
+      "meta": {
+        "foo": "user"
+      }
+    },
+    {
+      "type": "locations",
+      "id": "17",
+      "attributes": {
+        "name": "Location 17",
+        "createdAt": "2015-11-24T19:56:29.000000Z",
+        "updatedAt": "2003-09-10T19:50:38.000000Z"
+      },
+      "links": {
+        "self": "http://localhost/api/v1/locations/17"
+      },
+      "meta": {
+        "foo": "location"
+      }
+    },
+    {
+      "type": "tournaments",
+      "id": "19",
+      "attributes": {
+        "id": "19",
+        "name": "Tournament 19",
+        "isActive": true,
+        "createdAt": "2021-09-08T18:46:27.000000Z",
+        "updatedAt": "2021-09-08T18:46:27.000000Z"
+      },
+      "relationships": {
+        "creator": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/19/creator",
+            "self": "http://localhost/api/v1/tournaments/19/relationships/creator"
+          },
+          "data": {
+            "type": "users",
+            "id": "37"
+          }
+        },
+        "location": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/19/location",
+            "self": "http://localhost/api/v1/tournaments/19/relationships/location"
+          },
+          "data": {
+            "type": "locations",
+            "id": "19"
+          }
+        },
+        "games": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/19/games",
+            "self": "http://localhost/api/v1/tournaments/19/relationships/games"
+          }
+        }
+      },
+      "links": {
+        "self": "http://localhost/api/v1/tournaments/19"
+      },
+      "meta": {
+        "foo": "tournament"
+      }
+    },
+    {
+      "type": "users",
+      "id": "37",
+      "attributes": {
+        "username": "User 37",
+        "createdAt": "2021-09-08T18:46:27.000000Z",
+        "updatedAt": "2021-09-08T18:46:27.000000Z"
+      },
+      "links": {
+        "self": "http://localhost/api/v1/users/37"
+      },
+      "meta": {
+        "foo": "user"
+      }
+    },
+    {
+      "type": "locations",
+      "id": "19",
+      "attributes": {
+        "name": "Location 19",
+        "createdAt": "2001-02-08T14:12:01.000000Z",
+        "updatedAt": "1997-04-16T10:24:35.000000Z"
+      },
+      "links": {
+        "self": "http://localhost/api/v1/locations/19"
+      },
+      "meta": {
+        "foo": "location"
+      }
+    },
+    {
+      "type": "tournaments",
+      "id": "10",
+      "attributes": {
+        "id": "10",
+        "name": "Tournament 10",
+        "isActive": true,
+        "createdAt": "2021-09-08T18:46:27.000000Z",
+        "updatedAt": "2021-09-08T18:46:27.000000Z"
+      },
+      "relationships": {
+        "creator": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/10/creator",
+            "self": "http://localhost/api/v1/tournaments/10/relationships/creator"
+          },
+          "data": {
+            "type": "users",
+            "id": "19"
+          }
+        },
+        "location": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/10/location",
+            "self": "http://localhost/api/v1/tournaments/10/relationships/location"
+          },
+          "data": {
+            "type": "locations",
+            "id": "10"
+          }
+        },
+        "games": {
+          "links": {
+            "related": "http://localhost/api/v1/tournaments/10/games",
+            "self": "http://localhost/api/v1/tournaments/10/relationships/games"
+          }
+        }
+      },
+      "links": {
+        "self": "http://localhost/api/v1/tournaments/10"
+      },
+      "meta": {
+        "foo": "tournament"
+      }
+    },
+    {
+      "type": "users",
+      "id": "19",
+      "attributes": {
+        "username": "User 19",
+        "createdAt": "2021-09-08T18:46:27.000000Z",
+        "updatedAt": "2021-09-08T18:46:27.000000Z"
+      },
+      "links": {
+        "self": "http://localhost/api/v1/users/19"
+      },
+      "meta": {
+        "foo": "user"
+      }
+    },
+    {
+      "type": "locations",
+      "id": "10",
+      "attributes": {
+        "name": "Location 10",
+        "createdAt": "1986-11-01T06:33:14.000000Z",
+        "updatedAt": "1994-06-06T23:32:05.000000Z"
+      },
+      "links": {
+        "self": "http://localhost/api/v1/locations/10"
+      },
+      "meta": {
+        "foo": "location"
+      }
+    }
+  ]
+}
