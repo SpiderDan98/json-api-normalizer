@@ -122,7 +122,7 @@ export const jsonApiResourceNormalizer = (resource: JsonApiResource, included: J
 
             const normalizedRelationship = jsonApiResourceNormalizer(relationshipData, included, config);
 
-            normalized[relationship.name] = config.afterResource(normalizedRelationship, relationship);
+            normalized[relationship.name] = config.afterRelationship(normalizedRelationship, relationship);
         }
 
         if (!relationshipResource) {
