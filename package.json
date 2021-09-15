@@ -2,9 +2,10 @@
   "name": "@spiderdan98/json-api-normalizer",
   "version": "1.0.0",
   "description": "JSON API response normalizer",
-  "main": "dist/bundle.min.js",
+  "main": "dist/src/bundle.js",
+  "types": "dist/src/bundle.d.ts",
   "scripts": {
-    "prepare": "cross-env NODE_ENV=production webpack",
+    "build": "tsc",
     "test": "jest"
   },
   "keywords": [

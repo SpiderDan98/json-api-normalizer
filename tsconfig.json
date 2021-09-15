@@ -6,16 +6,17 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "resolveJsonModule": true,
-    "sourceMap": true,
+    "declaration": true,
     "baseUrl": "./src",
+    "outDir": "dist",
     "paths": {
       "@/*": [
         "*"
       ]
     }
   },
-  "include": [
-    "./src/**/*",
-    "./tests/**/*",
-  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

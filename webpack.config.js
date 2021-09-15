@@ -18,15 +18,4 @@ module.exports = {
         path: path.resolve('dist'),
         filename: PROD ? 'bundle.min.js' : 'bundle.js',
     },
-    optimization: {
-        minimize: PROD,
-        minimizer: [
-            new TerserPlugin({
-                parallel: true,
-                terserOptions: {
-                    module: true,
-                },
-            }),
-        ],
-    },
 };
