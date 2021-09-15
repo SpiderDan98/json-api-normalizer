@@ -7,16 +7,11 @@
     "preserveConstEnums": true,
     "resolveJsonModule": true,
     "declaration": true,
+    "rootDir": "src",
     "baseUrl": "./src",
-    "outDir": "dist",
-    "paths": {
-      "@/*": [
-        "*"
-      ]
-    }
+    "outDir": "dist"
   },
-  "exclude": [
-    "node_modules",
-    "dist"
+  "include": [
+    "src",
   ]
 }

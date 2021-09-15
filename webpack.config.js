@@ -1,4 +1,3 @@
-const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 const PROD = (process.env.NODE_ENV === 'production')
@@ -17,10 +16,5 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: PROD ? 'bundle.min.js' : 'bundle.js',
-    },
-    resolve: {
-        alias: {
-            '@': path.resolve('src'),
-        },
-    },
+    }
 };

@@ -2,14 +2,14 @@ import {
     JsonApiDocument, JsonApiError,
     JsonApiRelationships,
     JsonApiResource
-} from "@/types/json-api";
+} from "types/json-api";
 import {
     JsonApiNormalized,
     JsonApiNormalizedData,
     JsonApiNormalizedErrors,
     JsonApiNormalizedRelationship
-} from "@/types/normalized";
-import {Config} from "@/types/config";
+} from "types/normalized";
+import {Config} from "types/config";
 import * as pointer from "json-pointer";
 
 const defaultConfig: Config = {

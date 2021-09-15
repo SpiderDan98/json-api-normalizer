@@ -1,4 +1,4 @@
-import {JsonApiError, JsonApiResource} from "@/types/json-api";
+import {JsonApiError, JsonApiResource} from "types/json-api";
 
 export interface Config {
     onlyData?: boolean,

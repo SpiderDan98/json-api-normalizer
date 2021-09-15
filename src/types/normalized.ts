@@ -3,7 +3,7 @@ import {
     JsonApiLinks,
     JsonApiMeta,
     JsonApiResourceIdentifier
-} from "@/types/json-api";
+} from "types/json-api";
 
 export interface JsonApiNormalized<Data = any, Meta = JsonApiMeta, Links = JsonApiLinks, JsonApi = JsonApiServerInformation> {
     data: JsonApiNormalizedData<Data>,

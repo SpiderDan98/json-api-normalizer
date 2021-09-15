@@ -1,4 +1,4 @@
-import {ErrorStatusCodes} from "@/types/status-codes";
+import {ErrorStatusCodes} from "types/status-codes";
 
 export interface JsonApiDocument<Meta = JsonApiMeta> {
     data?: JsonApiResource | JsonApiResource[] | null,

@@ -1,8 +1,8 @@
 // @ts-nocheck
-import jsonApiNormalizer from "./index";
-import * as errorResponse from "../jsons/responses/error.json";
-import * as paginationResponse from "../jsons/responses/pagination.json";
-import * as normalizedPagination from "../jsons/normalized/pagination.json";
+import jsonApiNormalizer from "index";
+import * as errorResponse from "jsons/responses/error.json";
+import * as paginationResponse from "jsons/responses/pagination.json";
+import * as normalizedPagination from "jsons/normalized/pagination.json";
 
 test('test normalize json api pagination response', () => {
     const normalized = jsonApiNormalizer(paginationResponse);
