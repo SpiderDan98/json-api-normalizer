@@ -2,8 +2,8 @@
   "name": "@spiderdan98/json-api-normalizer",
   "version": "1.0.0",
   "description": "JSON API response normalizer",
-  "main": "dist/src/bundle.js",
-  "types": "dist/src/bundle.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "prepare": "tsc",
     "test": "jest"
