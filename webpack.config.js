@@ -5,7 +5,6 @@ const PROD = (process.env.NODE_ENV === 'production')
 
 module.exports = {
     entry: path.resolve('src/index.ts'),
-    devtool: 'source-map',
     module: {
         rules: [
             {
