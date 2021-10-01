@@ -1,7 +1,7 @@
 import {ErrorStatusCodes} from "types/status-codes";
 
-export interface JsonApiDocument<Meta = JsonApiMeta> {
-    data?: JsonApiResource | JsonApiResource[] | null,
+export interface JsonApiDocument<Data = any, Meta = JsonApiMeta> {
+    data?: JsonApiResource<Data> | JsonApiResource<Data>[] | null,
     errors?: JsonApiError[],
     meta?: Meta,
     jsonapi?: JsonApiServerInformation,
@@ -42,8 +42,8 @@ export interface JsonApiResourceIdentifier<Meta = JsonApiMeta> {
     meta?: Meta,
 }
 
-export interface JsonApiResource extends JsonApiResourceIdentifier {
-    attributes?: any,
+export interface JsonApiResource<Data = any> extends JsonApiResourceIdentifier {
+    attributes?: Data,
     relationships?: JsonApiRelationships,
     links?: JsonApiLinks,
 }
