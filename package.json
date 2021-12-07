@@ -1,6 +1,6 @@
 {
   "name": "@spiderdan98/json-api-normalizer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "JSON API response normalizer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
