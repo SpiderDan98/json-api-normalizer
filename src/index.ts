@@ -115,26 +115,34 @@ export const jsonApiResourceNormalizer = (resource: JsonApiResource, included: J
     const relationships: JsonApiNormalizedRelationship[] = jsonApiRelationshipNormalizer(resource.relationships);
 
     for (const relationship of relationships) {
-        const relationshipResource = included.find(include => include.type === relationship.type && include.id === relationship.id);
-
-        if (relationshipResource) {
-            const relationshipData = config.beforeRelationship(relationshipResource);
-
-            const normalizedRelationship = jsonApiResourceNormalizer(relationshipData, included, config);
-
-            normalized[relationship.name] = config.afterRelationship(normalizedRelationship, relationship);
+        if (Array.isArray(relationship)) {
+            normalized[relationship[0].name] = relationship.map(relationshipItem => jsonApiRelationshipResourceNormalizer(config, included, relationshipItem));
+            continue;
         }
 
-        if (!relationshipResource) {
-            normalized[relationship.name] = undefined;
-        }
+        normalized[relationship.name] = jsonApiRelationshipResourceNormalizer(config, included, relationship);
     }
 
     return config.afterResource(normalized, resource);
 }
 
+export const jsonApiRelationshipResourceNormalizer = (config: Config, included: JsonApiResource[], relationship: JsonApiNormalizedRelationship) => {
+    let normalized: any;
+    const relationshipResource = included.find(include => include.type === relationship.type && include.id === relationship.id);
+
+    if (relationshipResource) {
+        const relationshipData = config.beforeRelationship(relationshipResource);
+
+        const normalizedRelationship = jsonApiResourceNormalizer(relationshipData, included, config);
+
+        normalized = config.afterRelationship(normalizedRelationship, relationship);
+    }
+
+    return normalized;
+}
+
 export const jsonApiRelationshipNormalizer = (relationships: JsonApiRelationships) => {
-    let normalized: JsonApiNormalizedRelationship[] = [];
+    let normalized: JsonApiNormalizedRelationship[] & JsonApiNormalizedRelationship[][] | any = [];
 
     for (const relationshipName of Object.keys(relationships)) {
         const relationship = relationships[relationshipName].data;
@@ -146,7 +154,7 @@ export const jsonApiRelationshipNormalizer = (relationships: JsonApiRelationship
         if (Array.isArray(relationship)) {
             normalized = [
                 ...normalized,
-                ...relationship.map(relationshipItem => ({
+                relationship.map(relationshipItem => ({
                     ...relationshipItem,
                     name: relationshipName,
                 })),
@@ -160,6 +168,8 @@ export const jsonApiRelationshipNormalizer = (relationships: JsonApiRelationship
             });
         }
     }
+
+    console.log(normalized)
 
     return normalized;
 }
