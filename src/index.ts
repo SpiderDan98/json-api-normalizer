@@ -146,8 +146,8 @@ export const jsonApiRelationshipNormalizer = (relationships: JsonApiRelationship
         if (Array.isArray(relationship)) {
             normalized = [
                 ...normalized,
-                ...relationship.map(relationship => ({
-                    ...relationship,
+                ...relationship.map(relationshipItem => ({
+                    ...relationshipItem,
                     name: relationshipName,
                 })),
             ];
