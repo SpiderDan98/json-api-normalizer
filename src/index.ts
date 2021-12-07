@@ -169,8 +169,6 @@ export const jsonApiRelationshipNormalizer = (relationships: JsonApiRelationship
         }
     }
 
-    console.log(normalized)
-
     return normalized;
 }
 
