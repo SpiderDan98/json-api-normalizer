@@ -115,6 +115,10 @@ export const jsonApiResourceNormalizer = (resource: JsonApiResource, included: J
     const relationships: JsonApiNormalizedRelationship[] = jsonApiRelationshipNormalizer(resource.relationships);
 
     for (const relationship of relationships) {
+        if (Array.isArray(relationship) && relationship.length === 0) {
+            continue;
+        }
+
         if (Array.isArray(relationship)) {
             normalized[relationship[0].name] = relationship.map(relationshipItem => jsonApiRelationshipResourceNormalizer(config, included, relationshipItem));
             continue;
